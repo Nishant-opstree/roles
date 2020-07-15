@@ -2,20 +2,8 @@
 - name: Update apt cache
   apt:
     update_cache: yes  
-
-#- name: Download go 
-#  unarchive:
-#    src: "{{ go_download_url }}"
-#    dest: /usr/local/
-#    remote_src: yes
-
 - name: Install Go
   snap:
     name: go
     state: present
     classic: yes
-
-#- name: Export GOROOT, GOPATH, PATH
-#  copy: 
-#    src: go-bin.sh
-#    dest: /etc/profile.d/
