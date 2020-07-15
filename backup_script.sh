@@ -1,7 +1,7 @@
 #!/bin/bash
-host_tag="attendance"
-key_path="~/.jenkins/ec2-linux-public-01.pem"
-service_name="attendance"
+host_tag=$1
+key_path=$2
+service_name=$3
 host_ips=($(python dynamic-inventory.py $host_tag))
 for host_ip in "${host_ips[@]}"
 do
