@@ -1,0 +1,4 @@
+---
+nodejs_version: 12.x
+nodejs_ppa_script_url: https://deb.nodesource.com/setup_{{ nodejs_version }}
+path_of_frontend_app: /usr/local/frontend

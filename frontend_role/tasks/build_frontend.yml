@@ -1,0 +1,7 @@
+---
+- name: Install npm dependencies
+  shell: cd /usr/local/frontend && npm install 
+
+- name: Build frontend app
+  command: make -C {{ path_of_frontend_app }}
+  become_user: root

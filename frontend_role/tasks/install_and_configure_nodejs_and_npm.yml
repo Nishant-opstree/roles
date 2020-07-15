@@ -1,0 +1,14 @@
+---
+- name: Download script to install ppa
+  get_url:
+    url: "{{ nodejs_ppa_script_url }}"
+    dest: /tmp/nodesource_setup.sh
+
+- name: run script to update ppa
+  command: bash /tmp/nodesource_setup.sh
+
+- name: install nodejs
+  apt:
+    name: nodejs
+    state: present
+    update_cache: yes

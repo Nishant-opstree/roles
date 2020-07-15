@@ -1,0 +1,14 @@
+---
+- name: deploy service file of frontend app
+  template:
+    src: frontend.service.j2
+    dest: /lib/systemd/system/frontend.service
+  notify:
+    - Reload Daemon
+    - Start Frontend Service
+
+- name: Restart Frontend Service
+  systemd:
+    state: restarted
+    name: frontend.service
+    enabled: yes

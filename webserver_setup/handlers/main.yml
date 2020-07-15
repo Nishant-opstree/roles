@@ -1,0 +1,7 @@
+---
+# handlers file for webserver_setup
+- name: Reload Nginx
+  systemd:
+    name: nginx
+    state: restarted
+    

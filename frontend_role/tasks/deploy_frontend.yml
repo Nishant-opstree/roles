@@ -1,0 +1,7 @@
+---
+- name: deploy frontend app files to remote
+  copy:
+    src: frontend
+    dest: /usr/local/
+    remote_src: no
+    force: yes

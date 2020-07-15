@@ -1,0 +1,7 @@
+---
+# tasks file for frontend_role
+- include: install_basic_dependencies.yml
+- include: install_and_configure_nodejs_and_npm.yml
+- include: deploy_frontend.yml
+- include: build_frontend.yml
+- include: deploy_frontend_service.yml
