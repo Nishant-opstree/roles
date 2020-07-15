@@ -1,0 +1,11 @@
+---
+# defaults file for attendence_role
+go_version: 1.14
+go_download_url: https://dl.google.com/go/go{{ go_version }}.linux-amd64.tar.gz
+go_root_path: /usr/local/go
+go_path: $HOME/go
+path: $GOPATH/bin:$GOROOT/bin:$PATH
+environment_variables:
+  - "export GOROOT={{ go_root_path }}"
+  - "export GOPATH={{ go_path }}"
+  - "export PATH={{ path }}"

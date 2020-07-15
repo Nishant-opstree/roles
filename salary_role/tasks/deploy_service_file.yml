@@ -1,0 +1,14 @@
+---
+- name: deploy service file of salary app
+  template:
+    src: salary.service.j2
+    dest: /lib/systemd/system/salary.service
+  notify:
+    - Reload Daemon
+    - Start Salary Service
+
+- name: Restart Salary Service
+  systemd:
+    state: restarted
+    name: salary.service
+    enabled: yes

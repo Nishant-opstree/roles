@@ -1,0 +1,6 @@
+---
+- name: deploy salary app files to remote
+  copy:
+    src: salary
+    dest: /usr/local/
+    remote_src: no

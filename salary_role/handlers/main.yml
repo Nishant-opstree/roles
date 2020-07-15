@@ -1,0 +1,11 @@
+---
+# handlers file for attendence_deploy_role
+- name: Reload Daemon
+  systemd:
+    daemon_reload: yes
+
+- name: Start Salary Service
+  systemd:
+    state: started
+    name: salary.service
+    enabled: yes
