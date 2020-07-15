@@ -1,0 +1,8 @@
+---
+- name: install pip
+  apt: name=python3-pip state=latest
+- name: install libmysqlclient-dev
+  apt: name=libmysqlclient-dev state=latest
+- name: install the python mysql db
+  apt: name=python-mysqldb state=latest
+

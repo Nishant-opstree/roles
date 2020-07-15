@@ -1,0 +1,16 @@
+---
+- name: Set MySQL root Password
+  mysql_user:
+    login_host: 'localhost'
+    login_user: 'root'
+    login_password: ''
+    name: 'root'
+    password: '{{ mysql_pass }}'
+    state: present
+
+- name: Create Db attendence
+  mysql_db: 
+    db: attendencedb 
+    state: present
+    login_user: root
+    login_password: "{{ mysql_pass }}"

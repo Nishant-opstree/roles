@@ -1,0 +1,6 @@
+---
+# tasks file for sqltest
+- include: insphp.yml
+- include: sqlser.yml
+- include: inspip.yml
+- include: mysqldb.yml

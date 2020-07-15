@@ -1,0 +1,7 @@
+---
+
+- name: deploy attendence app files to remote
+  copy:
+    src: attendance
+    dest: /usr/local/
+    remote_src: no

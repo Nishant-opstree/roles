@@ -1,0 +1,15 @@
+[Unit]
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+Environment=CONFIG_FILE={{ path_of_attendence_app }}/config.yaml
+ExecStart={{ path_of_config_file }}/attendance
+
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,3 @@
+---
+- name: install mysql-server
+  package: name=mysql-server update_cache=yes state=latest

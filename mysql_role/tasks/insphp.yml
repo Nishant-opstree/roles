@@ -1,0 +1,9 @@
+---
+- name: install apache2-php5
+  apt: name=libapache2-mod-php update_cache=yes state=latest
+- name: install php-cli
+  apt: name=php-cli update_cache=yes state=latest
+- name: install php-gd
+  package: name=php-gd update_cache=yes state=latest
+- name: install php-mysql
+  package: name=php-mysql update_cache=yes state=latest

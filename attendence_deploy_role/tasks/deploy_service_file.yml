@@ -1,0 +1,14 @@
+---
+- name: deploy service file of attendence app
+  template:
+    src: attendence.service.j2
+    dest: /lib/systemd/system/attendence.service
+  notify:
+    - Reload Daemon
+    - Start Attendence Service
+
+- name: Restart Attendence Service
+  systemd:
+    state: restarted
+    name: attendence.service
+    enabled: yes
