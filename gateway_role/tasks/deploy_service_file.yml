@@ -1,0 +1,14 @@
+---
+- name: deploy service file of gateway app
+  template:
+    src: gateway.service.j2
+    dest: /lib/systemd/system/gateway.service
+  notify:
+    - Reload Daemon
+    - Start Gateway Service
+
+- name: Restart Gateway Service
+  systemd:
+    state: restarted
+    name: gateway.service
+    enabled: yes

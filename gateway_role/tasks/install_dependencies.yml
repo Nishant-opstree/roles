@@ -1,0 +1,17 @@
+---
+- name: Install Basic Dependencies
+  apt:
+    name: 
+      - make 
+
+- name: Set JAVA_HOME
+  blockinfile:
+    path: /home/ubuntu/.bashrc
+    block: |
+      export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+
+- name: install maven
+  apt:
+    name: maven
+    update_cache: yes
+    state: present

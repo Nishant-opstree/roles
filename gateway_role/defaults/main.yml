@@ -1,0 +1,3 @@
+---
+# defaults file for gateway_role
+path_of_gateway_app: /usr/local/gateway

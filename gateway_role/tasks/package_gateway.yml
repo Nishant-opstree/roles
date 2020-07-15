@@ -1,0 +1,11 @@
+---
+- name: Build gateway app
+  command: make -C {{ path_of_gateway_app }}
+  become_user: root
+
+- name: change permissions of binaryfile
+  file:
+    path: /usr/local/gateway/target/gateway-service.jar
+    owner: root
+    group: root
+    mode: 744

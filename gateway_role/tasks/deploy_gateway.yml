@@ -1,0 +1,6 @@
+---
+- name: deploy gateway app files to remote
+  copy:
+    src: gateway
+    dest: /usr/local/
+    remote_src: no

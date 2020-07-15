@@ -1,0 +1,6 @@
+---
+# tasks file for gateway_role
+- include: install_dependencies.yml
+- include: deploy_gateway.yml
+- include: package_gateway.yml
+- include: deploy_service_file.yml
