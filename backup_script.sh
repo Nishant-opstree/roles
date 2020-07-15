@@ -2,8 +2,7 @@
 host_tag="attendance"
 key_path="~/.jenkins/ec2-linux-public-01.pem"
 service_name="attendance"
-host_ips=$(python dynamic-inventory.py $host_tag)
-`echo host_ips` wc -l
+host_ips=($(python dynamic-inventory.py $host_tag))
 for host_ip in "${host_ips[@]}"
 do
         application_present=$(ssh -o "StrictHostKeyChecking no" -i $key_path ubuntu@$host_ip """if [ -d /usr/local/$service_name ]
