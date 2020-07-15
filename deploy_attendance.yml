@@ -1,0 +1,7 @@
+---
+- hosts: webapp
+  become: yes
+  become_user: root
+  roles:
+    - install_go_role
+    - attendence_deploy_role
