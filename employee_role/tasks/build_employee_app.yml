@@ -1,0 +1,11 @@
+---
+- name: Build employee app
+  command: make -C {{ path_of_attendence_app }}
+  become_user: root
+
+- name: change permissions of binaryfile
+  file:
+    path: /usr/local/employee/employee
+    owner: root
+    group: root
+    mode: 744

@@ -1,0 +1,5 @@
+- name: deploy employee app files to remote
+  copy:
+    src: employee
+    dest: /usr/local/
+    remote_src: no

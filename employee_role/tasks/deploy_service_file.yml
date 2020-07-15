@@ -1,0 +1,14 @@
+---
+- name: deploy service file of employee app
+  template:
+    src: employee.service.j2
+    dest: /lib/systemd/system/employee.service
+  notify:
+    - Reload Daemon
+    - Start Employee Service
+
+- name: Restart Employee Service
+  systemd:
+    state: restarted
+    name: employee.service
+    enabled: yes

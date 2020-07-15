@@ -1,0 +1,4 @@
+---
+- include: install_basic_Dependencies.yml
+- include: download_and_configure_go.yml
+# - include: deploy_attendence_app

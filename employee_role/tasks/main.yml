@@ -1,0 +1,5 @@
+---
+# tasks file for attendence_deploy_role
+- include: deploy_employee_app.yml
+- include: build_employee_app.yml
+- include: deploy_service_file.yml
