@@ -5,4 +5,9 @@
     src: attendance
     dest: /usr/local/
     remote_src: no
-    mode: '0644'
+- name: Change ownership of a directory
+  file:
+    path: /usr/local/attendance
+    state: directory
+    recurse: yes
+    mode: '0777'
