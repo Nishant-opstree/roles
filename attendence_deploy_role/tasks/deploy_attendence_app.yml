@@ -5,3 +5,4 @@
     src: attendance
     dest: /usr/local/
     remote_src: no
+    mode: '0644'
