@@ -9,7 +9,7 @@ do
 if [ $application_present == "true" ]
 then    
         echo "true2"
-        scp -i $key_path -r ubuntu@$host_ip:/usr/local/$service_name .
+        scp -i $key_path --exclude='attendance' -r ubuntu@$host_ip:/usr/local/$service_name .
 else    
         echo "false2"
 fi
