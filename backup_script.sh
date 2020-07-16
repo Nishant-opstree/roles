@@ -10,7 +10,7 @@ if [ $application_present == "true" ]
 then    
         echo "true2"
 	mkdir attendance
-        rsync -av -e ssh -i $key_path --exclude='attendance' -r ubuntu@$host_ip:/usr/local/$service_name .
+        scp -i $key_path --exclude='attendance' -r ubuntu@$host_ip:/usr/local/$service_name . > /dev/null 2>&1
 else    
         echo "false2"
 fi
