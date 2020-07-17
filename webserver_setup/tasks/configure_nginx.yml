@@ -1,0 +1,7 @@
+---
+- name: Update nginx config file 
+  copy: 
+    src: webserver/nginx.conf
+    dest: /etc/nginx
+  notify:
+    - Reload Nginx

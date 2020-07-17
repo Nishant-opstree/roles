@@ -1,0 +1,4 @@
+---
+# tasks file for webserver_setup
+- include: install_nginx.yml
+- include: configure_nginx.yml
