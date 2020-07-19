@@ -1,6 +1,6 @@
 ---
 - name: Build salary app
-  command: make -C {{ path_of_attendence_app }}
+  command: make -C {{ path_of_salary_app }}
   become_user: root
 
 - name: change permissions of binaryfile
